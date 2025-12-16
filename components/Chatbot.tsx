@@ -32,7 +32,11 @@ export default function ChatBot() {
       const res = await fetch("/api/ai", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ title }),
+       body: JSON.stringify({
+            title,
+            message: "#to-do list enhance",
+            source: "chatbot", // 🔑 THIS IS THE KEY
+        }),
       })
 
       const data = await res.json()
