@@ -28,7 +28,7 @@ export default function TaskInput({ userIdentifier, onTaskAdded }: Props) {
       body: JSON.stringify({
         taskId: data.id,
         title: data.title,
-        message: "#to-do list enhance",
+        message: "",
       }),
     })
 
